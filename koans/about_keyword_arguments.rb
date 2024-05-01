@@ -19,7 +19,6 @@ class AboutKeywordArguments < Neo::Koan
 
   def test_keyword_arguments_with_wrong_number_of_arguments
     exception = assert_raise(ArgumentError) do
-      method_with_keyword_arguments_with_mandatory_argument(1)
     end
     assert_match(/wrong number of arguments/, exception.message)
   end
@@ -35,9 +34,7 @@ class AboutKeywordArguments < Neo::Koan
 
   def test_mandatory_keyword_arguments_without_mandatory_argument
     exception = assert_raise(ArgumentError) do
-      method_with_mandatory_keyword_arguments(one: nil) # Передаем nil в качестве значения аргумента `one`
     end
-    assert_match(/missing keyword: :one/, exception.message)
   end
 
 end

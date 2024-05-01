@@ -12,7 +12,6 @@ require 'about_objects'
 require 'about_nil'
 require 'about_hashes'
 require 'about_methods'
-in_ruby_version("3") do
   require 'about_keyword_arguments'
 end
 require 'about_constants'
